@@ -6,14 +6,13 @@
 mkdir myNewProject
 cd myNewProject
 touch server.js .gitignore .env
+npm init -y
 mkdir server
-cd server
 npm i express mongoose dotenv nodemon
-cd ..
 npx create-react-app client
 ```
 
-add the following to [server.js](server.js)
+add the following to [server.js](./myNewProject/server.js)
 
 ```js
 const express = require('express');
@@ -23,14 +22,14 @@ const port = process.env.PORT;
    
 app.listen(port, () => console.log(`Listening on port: ${port}`) );
 ```
- add the following to [.gitignore](.gitignore)
+ add the following to [.gitignore](./myNewProject/.gitignore)
 
 ```.gitignore
 /node_modules
 .env
 ```
 
-add the following to [.env](.env)
+add the following to [.env](./myNewProject/.env)
 
 ```dotenv
 PORT=8000
